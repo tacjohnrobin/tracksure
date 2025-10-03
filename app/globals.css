@@ -121,8 +121,7 @@
   }
 
     body {
-      font-family: var(--font-nunito-sans), 'Roboto', sans-serif;
-    }
+    font-family: var(--font-opensans), system-ui, sans-serif;    }
   
     h1,
     h2,
@@ -131,7 +130,6 @@
     h5,
     h6,
     p {
-      font-family: var(--font-nunito-sans), 'Roboto', sans-serif;
-    }
+font-family: var(--font-opensans), system-ui, sans-serif;    } 
   
 }

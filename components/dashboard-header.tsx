@@ -1,16 +1,16 @@
 "use client"
 
-import { Bell, LogOut } from "lucide-react"
+import { Bell, LogOut, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { SidebarTrigger } from "@/components/ui/sidebar"
 
 export function DashboardHeader() {
   return (
-    <header className="sticky top-0 z-10 flex h-16 items-center justify-between border-b bg-card px-6">
-      <div className="flex items-center gap-4">
+    <header className="sticky top-0 z-10 flex h-18 items-center justify-between border-b bg-card px-4 sm:px-6">
+      <div className="flex items-center gap-2 sm:gap-4">
         <SidebarTrigger />
-        <div className="flex items-center gap-2">
+        <div className="hidden sm:flex items-center gap-2">
           <Button variant="secondary" size="sm" className="rounded-full">
             Barcode
           </Button>
@@ -21,13 +21,17 @@ export function DashboardHeader() {
             Mobile
           </Button>
         </div>
+        {/* Mobile menu button */}
+        <Button variant="ghost" size="sm" className="sm:hidden">
+          <Menu className="h-5 w-5" />
+        </Button>
       </div>
-      <div className="flex items-center gap-4">
-        <div className="text-sm">
+      <div className="flex items-center gap-2 sm:gap-4">
+        <div className="hidden sm:block text-sm">
           <span className="text-muted-foreground">Welcome, </span>
           <span className="font-medium">William Mugenya</span>
         </div>
-        <div className="text-xs text-muted-foreground">
+        <div className="hidden sm:block text-xs text-muted-foreground">
           Role: <span className="text-foreground">Project Staff</span>
         </div>
         <div className="relative">
@@ -40,7 +44,7 @@ export function DashboardHeader() {
         </div>
         <Button variant="destructive" size="sm" className="gap-2">
           <LogOut className="h-4 w-4" />
-          Logout
+          <span className="hidden sm:inline">Logout</span>
         </Button>
       </div>
     </header>

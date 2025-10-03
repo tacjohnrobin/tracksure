@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Roboto } from "next/font/google";  
+import { Open_Sans, Roboto } from "next/font/google";
 import "./globals.css";
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const openSans = Open_Sans({
+  variable: "--font-opensans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
-  weight: ["300","400","500","700"], 
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${nunitoSans.variable} ${roboto.variable} antialiased`}  
-      >
+      <body className={`${openSans.variable} ${roboto.variable} antialiased`}>
         {children}
       </body>
     </html>
